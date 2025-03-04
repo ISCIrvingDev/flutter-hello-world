@@ -47,8 +47,68 @@ class _MyHomePageState extends State<MyHomePage> {
           // borderRadius: BorderRadius.circular(16),
         ),
         padding: EdgeInsets.all(20),
-        child: const Text('Hello Flutter'),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: <Widget>[header(), section1(), footer()],
+        ),
         // margin: EdgeInsets.only(top: 20),
+      ),
+    );
+  }
+
+  Text header() {
+    return const Text(
+      'Hello Flutter',
+      style: TextStyle(fontWeight: FontWeight.bold),
+    );
+  }
+
+  Column section1() {
+    return Column(
+      children: [
+        Image.asset('assets/images/logo.png', height: 200),
+        const SizedBox(height: 5),
+        const Text(
+          'This is a welcome app to see the basics of Flutter',
+          style: TextStyle(fontWeight: FontWeight.bold),
+        ),
+      ],
+    );
+  }
+
+  Container footer() {
+    return Container(
+      padding: EdgeInsets.all(15),
+      width: double.infinity,
+      decoration: BoxDecoration(
+        color: Colors.black,
+        borderRadius: BorderRadius.circular(20),
+      ),
+      child: Row(
+        children: [
+          Image.asset('assets/images/logo.png', height: 50),
+          SizedBox(width: 5),
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              const Text(
+                "Irving Salazar",
+                style: TextStyle(
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              const Text(
+                "Software Engineer",
+                style: TextStyle(color: Colors.white),
+              ),
+              const Text(
+                "https://www.ingenious-development.net/",
+                style: TextStyle(color: Colors.white),
+              ),
+            ],
+          ),
+        ],
       ),
     );
   }
