@@ -12,6 +12,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
+        fontFamily: 'Poppins',
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
       ),
       home: const MyHomePage(title: 'Hello Flutter'),
@@ -35,6 +36,7 @@ class _MyHomePageState extends State<MyHomePage> {
         centerTitle: true,
         // backgroundColor: Theme.of(context).colorScheme.primaryContainer,
         backgroundColor: Colors.blue[900],
+        // * Nota) En el AppBar no agarra el "ThemeData" de MaterialApp, asi que se tiene que especificar
         title: Text(widget.title, style: TextStyle(fontFamily: 'Poppins')),
         titleTextStyle: TextStyle(color: Colors.white, fontSize: 24),
       ),
@@ -58,8 +60,11 @@ class _MyHomePageState extends State<MyHomePage> {
 
   Text header() {
     return const Text(
-      'Hello Flutter',
-      style: TextStyle(fontFamily: 'Poppins', fontWeight: FontWeight.bold),
+      'A basic Flutter app',
+      style: TextStyle(
+        fontFamily: 'DancingScript',
+        fontWeight: FontWeight.bold,
+      ),
     );
   }
 
@@ -70,7 +75,7 @@ class _MyHomePageState extends State<MyHomePage> {
         const SizedBox(height: 5),
         const Text(
           'A welcome app to see the basics of Flutter',
-          style: TextStyle(fontFamily: 'Poppins', fontWeight: FontWeight.bold),
+          style: TextStyle(fontWeight: FontWeight.bold),
         ),
       ],
     );
@@ -81,7 +86,7 @@ class _MyHomePageState extends State<MyHomePage> {
       padding: EdgeInsets.all(15),
       width: double.infinity,
       decoration: BoxDecoration(
-        color: Colors.black,
+        color: const Color.fromARGB(255, 17, 17, 17),
         borderRadius: BorderRadius.circular(20),
       ),
       child: Row(
@@ -94,18 +99,17 @@ class _MyHomePageState extends State<MyHomePage> {
               const Text(
                 "Irving Salazar",
                 style: TextStyle(
-                  fontFamily: 'Poppins',
                   color: Colors.white,
                   fontWeight: FontWeight.bold,
                 ),
               ),
               const Text(
                 "Software Engineer",
-                style: TextStyle(fontFamily: 'Poppins', color: Colors.white),
+                style: TextStyle(color: Colors.white, fontSize: 12),
               ),
               const Text(
                 "https://www.ingenious-development.net/",
-                style: TextStyle(fontFamily: 'Poppins', color: Colors.white),
+                style: TextStyle(color: Colors.white, fontSize: 10),
               ),
             ],
           ),
