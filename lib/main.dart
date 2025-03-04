@@ -35,7 +35,7 @@ class _MyHomePageState extends State<MyHomePage> {
         centerTitle: true,
         // backgroundColor: Theme.of(context).colorScheme.primaryContainer,
         backgroundColor: Colors.blue[900],
-        title: Text(widget.title),
+        title: Text(widget.title, style: TextStyle(fontFamily: 'Poppins')),
         titleTextStyle: TextStyle(color: Colors.white, fontSize: 24),
       ),
       body: Container(
@@ -59,7 +59,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Text header() {
     return const Text(
       'Hello Flutter',
-      style: TextStyle(fontWeight: FontWeight.bold),
+      style: TextStyle(fontFamily: 'Poppins', fontWeight: FontWeight.bold),
     );
   }
 
@@ -69,8 +69,8 @@ class _MyHomePageState extends State<MyHomePage> {
         Image.asset('assets/images/logo.png', height: 200),
         const SizedBox(height: 5),
         const Text(
-          'This is a welcome app to see the basics of Flutter',
-          style: TextStyle(fontWeight: FontWeight.bold),
+          'A welcome app to see the basics of Flutter',
+          style: TextStyle(fontFamily: 'Poppins', fontWeight: FontWeight.bold),
         ),
       ],
     );
@@ -94,17 +94,18 @@ class _MyHomePageState extends State<MyHomePage> {
               const Text(
                 "Irving Salazar",
                 style: TextStyle(
+                  fontFamily: 'Poppins',
                   color: Colors.white,
                   fontWeight: FontWeight.bold,
                 ),
               ),
               const Text(
                 "Software Engineer",
-                style: TextStyle(color: Colors.white),
+                style: TextStyle(fontFamily: 'Poppins', color: Colors.white),
               ),
               const Text(
                 "https://www.ingenious-development.net/",
-                style: TextStyle(color: Colors.white),
+                style: TextStyle(fontFamily: 'Poppins', color: Colors.white),
               ),
             ],
           ),
